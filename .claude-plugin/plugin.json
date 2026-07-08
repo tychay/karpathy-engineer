@@ -1,0 +1,8 @@
+{
+  "name": "karpathy-engineer",
+  "displayName": "Karpathy Engineer",
+  "version": "0.1.0",
+  "description": "Operationalizes the Karpathy Method (spec via interview, explicit verification, environment rules) as Claude Code skills. Bucket 1: grill-me/grilling interview skills, forked by coding vs non-technical mode.",
+  "author": { "name": "tychay" },
+  "repository": "https://github.com/tychay/karpathy-engineer"
+}
