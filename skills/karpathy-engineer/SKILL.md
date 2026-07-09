@@ -54,4 +54,4 @@ Example: OpenSpec → `opsx:apply` → verify → modify proposal parts, repeat 
 
 Review output here. Adjust project before next bucket, or revisit Phase 2/3 if unsatisfied.
 
-Offer to commit code before moving on. OpenSpec: archive + spec merge precede commit.
+Offer to commit code before moving on (likely back to Phase 2). OpenSpec: archive + spec merge precede commit.
