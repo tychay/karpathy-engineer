@@ -1,57 +1,60 @@
 ---
 name: karpathy-engineer
-description: General AI Workflow inspired by Andrej Karpathy in order to take advantage of AI knowledge and computation without outsourcing your understanding. Use when the user wants to do something rigorously or the project is very large or complex.
+description: General AI workflow inspired by Andrej Karpathy for taking advantage of AI knowledge and computation without outsourcing understanding. Use when the user wants to do something rigorously or the project is very large or complex.
 ---
-# Karpathy Engineering Model
+
+<essential_principles>
+# Karpathy Engineer
 
 Create clear design for project toward clear real goal. Project has at least first action planned, done in clear loop.
 
 ## Core Rules
-
 - Verify key **decisions** explicitly — nothing missed.
-- Document overall project + each bucket — resumable between sessions, handoff-ready to other sessions/subagents w/ narrower scope or less context.
+- Document the overall project + each bucket — resumable between sessions, handoff-ready to other sessions/subagents with narrower scope or less context.
 - Bias toward tight loops where possible.
-- Technical stuff: follow `karpathy-coder` guidelines. Complement this skill.
+- Technical work: follow `karpathy-coder` guidelines. Complement this skill.
 - Building **agile buckets**: bias small, compartmentalized specs.
 - Technical agile bucket: phases fit existing spec-driven dev workflows (e.g. OpenSpec).
+</essential_principles>
 
-## Phase 1. Uncover the real goal
+<intake>
+## Start
+What would you like to do?
 
-Real goal unknown → use `grill-me` to interview and find **real goal** of project + core decision (if any) project intends to drive.
+1. Find the real goal of a new or unclear project
+2. Break a project (whose goal is known) into agile buckets
+3. Run the build loop — spec, implement, and verify the next bucket
+4. Something else
 
-## Phase 2. Plan tight specs
+**Wait for response before proceeding.**
+</intake>
 
-Break project into small, agile buckets. Build one bucket at a time.
+<routing>
 
-From Phase 5: check if plan needs adjustment. If so or unsure, use `grill-me` retrospective to determine adjustment.
+| Response | Workflow |
+|----------|----------|
+| 1, "goal", "new project", "what am I building" | `workflows/goal-setting.md` |
+| 2, "plan", "buckets", "break down" | `workflows/project-planning.md` |
+| 3, "loop", "next bucket", "continue project", "build" | `workflows/agile-loop.md` (which runs `workflows/agile-build.md` per bucket) |
+| 4, other | Clarify, then select |
 
-## Phase 3. GTD the first/next bucket.
+**After reading the workflow, follow it exactly.**
+</routing>
 
-Next actionable bucket — first if project not started — must be fully spec'd before next phase.
+<workflows_index>
+## Workflows
 
-"Fully spec'd out" always includes:
-- **precise plan** for bucket, that also
-- defines **verification lever** — feedback + loop while executing plan to done
-- ends in **checkpoint** for review before moving on.
+| Workflow | Purpose |
+|----------|---------|
+| goal-setting.md | Interview to find the project's real goal + core decision |
+| project-planning.md | Break the project into small, agile buckets |
+| agile-loop.md | Outer repeat cycle: tight scope → agile-build → checkpoint review → adjust → repeat |
+| agile-build.md | Spec, implement, and verify one bucket to its checkpoint (run per iteration by agile-loop.md) |
 
-Use one or more `grill-me` sessions. Can run in separate session to save context.
+</workflows_index>
 
-Example: technical + OpenSpec → plan enough to make an `opsx:proposal`.
+<success_criteria>
+## Purpose
 
-**Verification lever** defined here as part of plan. Agree on:
-- Outline of eval criteria for high-quality final product. Be precise.
-- Pull external signal where possible (ex. past example as format to match).
-
-## Phase 4. Loop until checkpoint.
-
-Implement plan until verification lever passes. Core rule stands — **decision** needed → pause loop, verify with me. If needed, `grill-me` process.
-
-<!-- Not a decision but complex build → run final output by Codex, confirm both systems agree on verification. -->
-
-Example: OpenSpec → `opsx:apply` → verify → modify proposal parts, repeat until lever okay. This irrespective of "verification" tasks inside plan, unless lever fully captured in those tasks. Even then — want tight loops — `apply` step may break down to selected tasks, putting verification task in lever as early as possible.
-
-## Phase 5. Checkpoint.
-
-Review output here. Adjust project before next bucket, or revisit Phase 2/3 if unsatisfied.
-
-Offer to commit code before moving on (likely back to Phase 2). OpenSpec: archive + spec merge precede commit.
+A project run through this skill has: a real goal found via `goal-setting.md`, an ordered set of agile buckets from `project-planning.md`, and each bucket carried through `agile-loop.md`/`agile-build.md` to a reviewed checkpoint — with a code commit offered at each checkpoint.
+</success_criteria>
