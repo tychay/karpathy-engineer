@@ -7,32 +7,31 @@ triggers:
 - challenge my plan
 - interview me
 ---
-
 # Grill Me
 
-Interview the user until the plan is clear, defensible, and ready for action or a shared understanding is reached.
+Interview user till plan clear, defensible, ready for action — or shared understanding reached.
 
-This is not hostile debate. It is calibrated pressure. First find the user's knowledge level and desired intensity, then ramp questions to match.
+Not hostile debate. Calibrated pressure. First find user knowledge level + desired intensity, then ramp questions to match.
 
 ## Core Rules
 
 - Ask one question at a time.
-- Give a recommended answer for every question.
-- If a *fact* or answer can be found by reading files, code, docs, issues, or logs, inspect those first instead of asking. The *decisions*, though are mine and need to be asked.
-- Keep track of unresolved decisions, assumptions, risks, and dependencies.
-- Do not over-grill domain basics when the user is still learning the topic. Teach the missing frame briefly, then ask the next useful question.
-- Do not under-grill confident experts. If they know the terrain, pressure-test tradeoffs, edge cases, failure modes, and reversibility.
-- Let the user change intensity any time with "softer", "harder", "teach more", or "skip basics".
+- Give recommended answer for every question.
+- If *fact* found by reading files, code, docs, issues, logs — inspect first instead of asking. *Decisions* though, mine, need ask.
+- Track unresolved decisions, assumptions, risks, dependencies.
+- Don't over-grill domain basics if user still learning topic. Teach missing frame briefly, then ask next useful question.
+- Don't under-grill confident experts. If know terrain, pressure-test tradeoffs, edge cases, failure modes, reversibility.
+- Let user change intensity any time with "softer", "harder", "teach more", or "skip basics".
 
 ## Phase 1: Frame The Target
 
-Identify what should be grilled before asking about comfort. If the topic is not clear, ask:
+Identify what should be grilled before asking comfort. If topic unclear, ask:
 
 > What plan, design, or decision should I grill?
 >
-> Recommended answer: give me the concrete goal, current approach, constraints, and what decision you need to make.
+> Recommended answer: give concrete goal, current approach, constraints, decision needed.
 
-If context already contains the plan, summarize it in 3-6 bullets and ask for correction:
+If context already has plan, summarize in 3-6 bullets, ask correction:
 
 > I think target is: [...]
 >
@@ -40,7 +39,7 @@ If context already contains the plan, summarize it in 3-6 bullets and ask for co
 
 ## Phase 2: Calibration
 
-Before grilling the topic, ask a short calibration question unless the user's level is already obvious from context.
+Before grilling topic, ask short calibration question unless user's level already obvious from context.
 
 Ask:
 
@@ -48,28 +47,28 @@ Ask:
 >
 > Recommended answer: "I know the basics of [topic], but I want standard pressure. Explain missing concepts briefly, then keep pushing."
 
-Use the user's answer to set two dials:
+Use answer to set two dials:
 
 ### Knowledge Level
 
-- **New** - user lacks core vocabulary or model of the domain.
-- **Working** - user understands basics and can discuss tradeoffs.
-- **Expert** - user knows domain deeply and wants sharper critique.
+- **New** - lacks core vocab or model of domain.
+- **Working** - understands basics, can discuss tradeoffs.
+- **Expert** - knows domain deep, wants sharper critique.
 
 ### Pressure Level
 
-- **Light** - clarify goals, constraints, and missing context.
-- **Standard** - challenge assumptions, tradeoffs, and execution path.
-- **Hard** - probe failure modes, edge cases, incentives, reversibility, and second-order effects.
+- **Light** - clarify goals, constraints, missing context.
+- **Standard** - challenge assumptions, tradeoffs, execution path.
+- **Hard** - probe failure modes, edge cases, incentives, reversibility, second-order effects.
 
-If the user does not answer calibration, default to:
+If user skip calibration, default:
 
 - Knowledge: **Working**
 - Pressure: **Standard**
 
 ## Phase 3: Build The Decision Map
 
-Create a private decision map while asking questions one at a time:
+Build private decision map while asking questions one at a time:
 
 - Goal - what success means.
 - User or customer - who this affects.
@@ -80,11 +79,11 @@ Create a private decision map while asking questions one at a time:
 - Validation - how user will know it worked.
 - Rollback - how to undo or recover.
 
-Do not dump the full map unless user asks. Use it to choose the next question.
+Don't dump full map unless user ask. Use it to pick next question.
 
 ## Phase 4: Question Ladder
 
-Move through this ladder. Stop early if the plan becomes clear enough or user asks to stop.
+Move through ladder. Stop early if plan clear enough or user ask stop.
 
 ### 1. Goal Fit
 
@@ -92,39 +91,39 @@ Questions:
 
 - What outcome matters most?
 - What would make this not worth doing?
-- What problem are we solving, and for whom?
+- What problem solving, for whom?
 
 ### 2. Constraint Reality
 
 Questions:
 
 - What hard constraint cannot move?
-- What resource bottleneck decides the plan?
-- What assumption would kill the plan if false?
+- What resource bottleneck decides plan?
+- What assumption would kill plan if false?
 
 ### 3. Option Pressure
 
 Questions:
 
-- What are the top two alternatives?
-- Why this approach over the boring one?
-- What are you optimizing for: speed, quality, learning, cost, control, or upside?
+- What are top two alternatives?
+- Why this approach over boring one?
+- What optimizing for: speed, quality, learning, cost, control, or upside?
 
 ### 4. Execution Path
 
 Questions:
 
-- What is the smallest useful version?
+- What's smallest useful version?
 - What has to happen first?
-- What can be deferred without harming the goal?
+- What can defer without harming goal?
 
 ### 5. Failure Modes
 
 Questions:
 
 - How does this fail in production or real use?
-- What edge case would embarrass the plan?
-- What part is hardest to observe once it breaks?
+- What edge case would embarrass plan?
+- What part hardest to observe once it breaks?
 
 ### 6. Validation
 
@@ -138,9 +137,9 @@ Questions:
 
 Questions:
 
-- What decision here is hardest to undo?
+- What decision here hardest to undo?
 - What backup, migration, rollback, or escape hatch exists?
-- What should be logged as an ADR or explicit tradeoff?
+- What should be logged as ADR or explicit tradeoff?
 
 ## Pressure Adaptation
 
@@ -149,39 +148,39 @@ Questions:
 - Define one missing concept in 2-4 sentences before asking.
 - Avoid jargon unless you define it.
 - Ask fewer branching questions.
-- Focus on goals, constraints, and first principles.
-- Recommended answers should model good reasoning, not only give answer text.
+- Focus goals, constraints, first principles.
+- Recommended answers model good reasoning, not just answer text.
 
 ### If Knowledge Is Working
 
 - Ask normal tradeoff questions.
 - Surface alternatives.
-- Push for validation and smallest useful version.
+- Push validation, smallest useful version.
 - Challenge vague words like "simple", "scalable", "good", "clean", or "fast".
 
 ### If Knowledge Is Expert
 
 - Skip basics.
 - Ask sharper counterfactuals.
-- Probe hidden costs, adverse incentives, migration paths, and long-term maintenance.
-- Ask what evidence would change their mind.
+- Probe hidden costs, adverse incentives, migration paths, long-term maintenance.
+- Ask what evidence changes their mind.
 
 ### If Pressure Is Light
 
 - Keep questions clarifying.
 - Use supportive framing.
-- Stop after top ambiguities are resolved.
+- Stop after top ambiguities resolved.
 
 ### If Pressure Is Standard
 
-- Challenge assumptions and tradeoffs.
-- Keep moving until implementation path is concrete.
+- Challenge assumptions, tradeoffs.
+- Keep moving till implementation path concrete.
 
 ### If Pressure Is Hard
 
 - Be direct.
 - Name weak reasoning.
-- Ask about unpleasant edge cases.
+- Ask unpleasant edge cases.
 - Demand observable validation.
 - Still ask one question at a time.
 
@@ -199,12 +198,12 @@ Keep "Why it matters" to one sentence.
 
 ## When To Stop
 
-Stop grilling when one of these is true:
+Stop grilling when one true:
 
 - User says stop.
-- Plan has clear goal, constraints, chosen approach, validation, and next step.
-- Missing information can only come from external research or code exploration.
-- User's knowledge gap blocks useful grilling; switch to brief teaching and propose next learning question.
+- Plan has clear goal, constraints, chosen approach, validation, next step.
+- Missing info only from external research or code exploration.
+- User's knowledge gap blocks useful grilling; switch brief teaching, propose next learning question.
 
 End with:
 
@@ -213,10 +212,10 @@ End with:
 - Next concrete action.
 - Risks to watch.
 
-After grilling stops, determine where/how the decision or plan is delivered:
+After grilling stops, determine where/how decision or plan delivered:
 
-- If already in plan mode, the plan itself is the deliverable.
-- If not, determine if the user needs/wants any artifacts:
-    - None: Just deliver "End with" in chat and go into the next step.
-    - Just the result: Write "End with" as a markdown file of the user's choosing.
-    - Research-Discuss: If grilling was not done in `research-discuss` file, use the `research-discuss` skill to format the live back-and-forth, then create a new section with the "End with" content blockquoted in the file.
+- If already in plan mode, plan itself is deliverable.
+- If not, determine if user needs/wants any artifacts:
+    - None: deliver "End with" in chat, go next step.
+    - Just result: write "End with" as markdown file of user's choosing.
+    - Research-Discuss: if grilling not done in `research-discuss` file, use `research-discuss` skill to format live back-and-forth, then create new section with "End with" content blockquoted in file.
