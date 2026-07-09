@@ -2,7 +2,7 @@
   "name": "karpathy-engineer",
   "displayName": "Karpathy Engineer",
   "version": "0.2.0",
-  "description": "Operationalizes the Karpathy Method (spec via interview, explicit verification, environment rules) as Claude Code skills. Bucket 1: grill-me/grilling interview skills, forked by coding vs non-technical mode. Also ships karpathy-coder: an active coding discipline enforcer (assumption/complexity/diff/goal checks) with a review agent, /karpathy-check command, and pre-commit hook.",
+  "description": "Operationalizes the Karpathy Method (spec via interview, explicit verification, environment rules) as Claude Code skills. Ships grill-me: a single, context-free interview skill for stress-testing plans and decisions. Ships karpathy-engineer: a 5-phase agile-bucket orchestrator that supplies goal-context to grill-me and chains into OpenSpec for technical work. Also vendors karpathy-coder wholesale: an active coding discipline enforcer (assumption/complexity/diff/goal checks) with a review agent, /karpathy-check command, and pre-commit hook.",
   "author": { "name": "tychay" },
   "repository": "https://github.com/tychay/karpathy-engineer"
 }

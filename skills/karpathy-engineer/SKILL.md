@@ -12,7 +12,7 @@ Create a clear design for a project based toward a clear real goal. The project 
 - Make me verify key **decisions** explicitly to ensure nothing gets missed.
 - We should document both the overall project and each bucket so it can be resumed between sessions or handed off to other sessions or subagents with narrower scope or less context.
 - We should bias toward tight loops where possible.
-- When something is technical, remember to follow `karpathy-coder` guidelines if the skill is installed. They should complement this skill.
+- When something is technical, remember to follow `karpathy-coder` guidelines. They should complement this skill.
 - When we build **agile buckets**, we should bias towards small, compartmentalized specs.
 - If the agile bucket is technical, then phases of those specs should fit within existing spec-driven development workflows (e.g. OpenSpec)
 
@@ -53,4 +53,6 @@ For example, if using OpenSpec, this would be: `opsx:apply` → verify → modif
 
 ## Phase 5. Checkpoint.
 
-This is a phase where I can review the output, and we can adjust the project, before moving on to the next bucket.
+This is a phase where I can review the output, and we can adjust the project, before moving on to the next bucket, or revisit the Phase 2 or 3 if unsatisfied with the result.
+
+Offer to commit the code before moving on. If using OpenSpec, an archive and spec merge should precede the commit.
