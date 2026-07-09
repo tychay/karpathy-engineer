@@ -5,6 +5,20 @@
 
 Let's operationalize that as a Claude-code plugin!
 
+## Before / After
+
+**grill-me** — *real, from the session that wrote this README:*
+> Before: three questions fired in one batch, assumptions filled in, moved on.
+> After: caught mid-conversation — forced back to one question at a time, the drift corrected before it compounded over ten more turns.
+
+**karpathy-check** — *illustrative:*
+> Before: a one-line bug fix ships with a new helper class, a "just in case" try/except, and an unrelated rename.
+> After: `/karpathy-check` flags the diff noise ratio; the commit shrinks back to the actual fix.
+
+**karpathy-engineer** — *illustrative:*
+> Before: "set up my retro-gaming handhelds" sits as a vague backlog line with no clear definition of done.
+> After: grilled into a real goal, first bucket spec'd (plan + verification lever + checkpoint) with a real deliverable that moves the needle, rest deferred to backlog instead of pretend-finished.
+
 ## Skills
 
 - **grill-me** — interview the user relentlessly to reach shared understanding on a plan or decision before acting on it. Triggers on "grill me", "interview me", or before `/opsx:propose` for coding tasks. Single skill, no fork — see `adr/0002` and `adr/0003`.
