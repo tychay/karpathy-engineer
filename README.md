@@ -1,12 +1,9 @@
 # Karpathy Engineer
 
-Operationalizes the [Karpathy Method](https://en.wikipedia.org/wiki/Andrej_Karpathy) (Spec via interview → small agile buckets → explicit Verifier → Environment rules) as Claude Code skills.
+> "You can outsource your thinking, but you can't outsource your understanding."
+> — Andrej Karpathy
 
-## Status
-
-Ships `grill-me` (single, context-free interview skill — no mode/output fork), `karpathy-engineer` (5-phase agile-bucket orchestrator that supplies goal-context to grill-me and chains into OpenSpec for technical work), and `karpathy-coder` (vendored coding-discipline enforcer).
-
-Project state/roadmap lives outside this repo, in the user's vault (`karpathy-engineer-state.md`) — see `adr/` for the reasoning behind each design decision and `openspec/specs/` for the capability specs.
+Let's operationalize that as a Claude-code plugin!
 
 ## Skills
 
