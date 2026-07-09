@@ -19,6 +19,15 @@ Let's operationalize that as a Claude-code plugin!
 > Before: "set up my retro-gaming handhelds" sits as a vague backlog line with no clear definition of done.
 > After: grilled into a real goal, first bucket spec'd (plan + verification lever + checkpoint) with a real deliverable that moves the needle, rest deferred to backlog instead of pretend-finished.
 
+## Why This Exists
+
+> **TODO (stub):** Karpathy's method splits into three layers — Spec, Verifier, Environment (see [notes](docs/use-karpathys-method.md)). This section should break each layer down principle-by-principle with a principle → tool/skill table, the way `karpathy-coder`'s own README does for its 4 principles below.
+
+Stub notes:
+- "AI drifts without pushback when it fills in unstated assumptions" belongs under Layer 1 ("be precise and use your brain"), not as a standalone pitch line
+- "grill-me" exists to operationalize "interview me" in the prompt in a more precise manner than [grill-me](https://www.aihero.dev/my-grill-me-skill-has-gone-viral) does
+- "karpathy-coder" was [vendored-from](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/karpathy-coder/README.md) to cover complementary coding-rules from a proto-twitter post
+
 ## Skills
 
 - **grill-me** — interview the user relentlessly to reach shared understanding on a plan or decision before acting on it. Triggers on "grill me", "interview me", or before `/opsx:propose` for coding tasks. Single skill, no fork — see `adr/0002` and `adr/0003`.
