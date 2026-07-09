@@ -34,6 +34,10 @@ Let's operationalize that as a Claude-code plugin!
 
 Vendored from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills/tree/main/engineering/karpathy-coder) (MIT). Principles are Karpathy's observations; tooling and enforcement patterns are Alireza Rezvani's.
 
+## Prerequisites
+
+`python3` on PATH — `karpathy-coder`'s 4 tools (`assumption_linter.py`, `complexity_checker.py`, `diff_surgeon.py`, `goal_verifier.py`) are stdlib-only Python scripts.
+
 ## Installation
 
 ### From a plugin marketplace
