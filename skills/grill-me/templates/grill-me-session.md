@@ -1,6 +1,8 @@
 ---
 modified: {{YYYY-MM-DD}}
 created: {{YYYY-MM-DD}}
+type: grill-me-session
+status: {{completed | in-progress}}
 ---
 
 > [!abstract]
