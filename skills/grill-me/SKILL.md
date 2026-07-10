@@ -81,6 +81,8 @@ Don't dump the full map unless the user asks. Use it to pick the next question.
 <phase name="4: Question Ladder">
 Move through the ladder. Stop early if the plan is clear enough or the user asks to stop.
 
+Track how many questions from this ladder are actually asked this session — `<success_criteria>` needs this count later.
+
 1. **Goal Fit** - What outcome matters most? What would make this not worth doing? What problem, solved for whom?
 2. **Constraint Reality** - What hard constraint cannot move? What resource bottleneck decides the plan? What assumption would kill the plan if false?
 3. **Option Pressure** - What are the top two alternatives? Why this approach over the boring one? What is being optimized for: speed, quality, learning, cost, control, or upside?
@@ -155,11 +157,16 @@ End with:
 - Next concrete action.
 - Risks to watch.
 
-After grilling stops, determine where/how the decision or plan is delivered:
+If already in plan mode, the plan itself is the deliverable — stop here.
 
-- If already in plan mode, the plan itself is the deliverable.
-- If not, determine if the user needs/wants any artifacts:
-    - None: deliver the "End with" content in chat, go to the next step.
-    - Just result: write the "End with" content as a markdown file of the user's choosing.
-    - Research-Discuss: if grilling wasn't done in a `research-discuss` file, use the `research-discuss` skill to format the live back-and-forth, then create a new section with the "End with" content blockquoted in the file.
+Otherwise, state the phase-4 ladder question count out loud (e.g. "Ladder questions asked: N") before applying the branch below — this makes the count checkable, not just internal bookkeeping:
+
+- **Count is 0** (frame/calibration only, no real ladder question asked): deliver the "End with" content in chat, done. No save-ask — there's no back-and-forth worth saving.
+- **Count is 1 or more**: this is a mandatory ask, not a judgment call — do not skip it, do not decide on the user's behalf that the session is "too small" or "obviously fine." Ask directly, before doing anything else:
+
+    > Save this session? If yes: conclusions only, or the full session transcript?
+
+    - **No**: deliver the "End with" content in chat, done.
+    - **Conclusions only**: write the "End with" content as a markdown file, location of the user's choosing.
+    - **Full session transcript**: Determine the location of the user's choosing. If it is an existing file, read `templates/grill-me-session-section.md` else `templates/grill-me-session.md`. Copy its structure, and fill it with this session's actual transcript (frame, calibration, every ladder Q&A, asides) plus the "End with" content in its closing callout. Append or Save to the location.
 </success_criteria>
