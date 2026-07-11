@@ -4,5 +4,19 @@
   "version": "0.2.0",
   "description": "Operationalizes the Karpathy Method (spec via interview, explicit verification, environment rules) as Claude Code skills. Ships grill-me: a single, context-free interview skill for stress-testing plans and decisions. Ships karpathy-engineer: a 5-phase agile-bucket orchestrator that supplies goal-context to grill-me and chains into OpenSpec for technical work. Also vendors karpathy-coder wholesale: an active coding discipline enforcer (assumption/complexity/diff/goal checks) with a review agent, /karpathy-check command, and pre-commit hook.",
   "author": { "name": "tychay" },
-  "repository": "https://github.com/tychay/karpathy-engineer"
+  "repository": "https://github.com/tychay/karpathy-engineer",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/src/hooks/skill-trigger-match.js\"",
+            "timeout": 5,
+            "statusMessage": "Checking skill triggers..."
+          }
+        ]
+      }
+    ]
+  }
 }

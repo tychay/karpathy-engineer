@@ -1,6 +1,7 @@
 ---
 name: karpathy-engineer
 description: General AI workflow inspired by Andrej Karpathy for taking advantage of AI knowledge and computation without outsourcing understanding. Use when the user wants to do something rigorously or the project is very large or complex.
+triggers: []
 ---
 
 <essential_principles>

@@ -1,0 +1,20 @@
+#!/bin/sh
+# This repo's pre-commit: keep triggers.json in sync with skills/*/SKILL.md
+# `triggers:` frontmatter. Fails the commit (does not auto-regenerate/restage)
+# if any staged SKILL.md makes triggers.json stale.
+#
+# One-time setup (per clone): git config core.hooksPath githooks
+
+STAGED=$(git diff --cached --name-only --diff-filter=ACM)
+
+if echo "$STAGED" | grep -qE '^skills/[^/]+/SKILL\.md$'; then
+  if ! node src/hooks/build-triggers.js --check; then
+    echo ""
+    echo "pre-commit: triggers.json is stale."
+    echo "Run: node src/hooks/build-triggers.js"
+    echo "Then stage the regenerated triggers.json and commit again."
+    exit 1
+  fi
+fi
+
+exit 0

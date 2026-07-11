@@ -47,6 +47,22 @@ Vendored from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/c
 
 `python3` on PATH — `karpathy-coder`'s 4 tools (`assumption_linter.py`, `complexity_checker.py`, `diff_surgeon.py`, `goal_verifier.py`) are stdlib-only Python scripts.
 
+## Development
+
+Skill trigger phrases live in each `SKILL.md`'s `triggers:` frontmatter and are compiled into a static `triggers.json` (read by a `UserPromptSubmit` hook — see `src/hooks/`). After editing any `triggers:` field, regenerate:
+
+```bash
+node src/hooks/build-triggers.js
+```
+
+This repo versions its git hooks in `githooks/` instead of the default `.git/hooks/`. One-time setup per clone:
+
+```bash
+git config core.hooksPath githooks
+```
+
+This enables `githooks/pre-commit`, which fails a commit if a staged `SKILL.md`'s `triggers:` were edited without regenerating `triggers.json`.
+
 ## Installation
 
 ### From a plugin marketplace

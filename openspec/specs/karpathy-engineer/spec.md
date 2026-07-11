@@ -29,3 +29,10 @@ When a bucket involves writing or modifying code, `karpathy-engineer` SHALL appl
 #### Scenario: Implementing a technical bucket
 - **WHEN** Phase 4 involves writing code
 - **THEN** the loop follows `karpathy-coder`'s discipline in addition to `karpathy-engineer`'s own verification lever
+
+### Requirement: karpathy-engineer declares its trigger phrases in frontmatter
+The `karpathy-engineer` skill's SKILL.md SHALL declare a `triggers:` frontmatter array containing its known invocation phrases, consumed by this plugin's trigger-map generator.
+
+#### Scenario: A user says a declared trigger phrase
+- **WHEN** a user's prompt contains one of `karpathy-engineer`'s declared trigger phrases
+- **THEN** the plugin's `UserPromptSubmit` hook directs the model to invoke `karpathy-engineer`, independent of whether the model would have noticed the phrase in the skill's prose description

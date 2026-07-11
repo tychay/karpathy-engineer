@@ -1,6 +1,7 @@
 ---
 name: grill-me
 description: Runs a calibrated interview to stress-test a plan, design, idea, or decision until it is clear, defensible, and ready for action. Use when the user says "grill me", "stress-test this", "challenge my plan", "interview me", or otherwise wants a plan pressure-tested before building.
+triggers: ["grill me", "stress-test this", "challenge my plan", "interview me"]
 ---
 
 <objective>
