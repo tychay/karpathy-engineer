@@ -7,7 +7,7 @@
 
 Skill invocation in this plugin has relied entirely on the model reading a system-reminder-injected list of skill names and prose descriptions, then deciding on its own to call the Skill tool when a user's phrasing matches a documented trigger. This failed in a confirmed, reproducible way: `grill-me`'s description literally contains the phrase "interview me," and a session where the user said exactly that still did not invoke `grill-me` — the assistant did ad hoc research and used AskUserQuestion instead. The user reported this recurring.
 
-A grill-me interview session (2026-07-10, saved at the user's vault under `coding-projects/karpathy-engineer/buckets/2026-07-10-grill-me-fix-skill-trigger-hook.md`) established that Claude Code's `UserPromptSubmit` hook mechanism fires on every user prompt independent of tool calls — demonstrated live via the separately-installed `caveman` plugin's own `UserPromptSubmit` hook, which injects a per-turn reminder regardless of whether any tool is used that turn. This refuted the initial assumption that a hook couldn't apply here because "no tool is involved."
+A grill-me interview session (2026-07-10) established that Claude Code's `UserPromptSubmit` hook mechanism fires on every user prompt independent of tool calls — demonstrated live via the separately-installed `caveman` plugin's own `UserPromptSubmit` hook, which injects a per-turn reminder regardless of whether any tool is used that turn. This refuted the initial assumption that a hook couldn't apply here because "no tool is involved."
 
 ## Decision
 

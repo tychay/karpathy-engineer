@@ -16,7 +16,7 @@ Let's operationalize that as a Claude-code plugin!
 > After: `/karpathy-check` flags the diff noise ratio; the commit shrinks back to the actual fix.
 
 **karpathy-engineer** — *illustrative:*
-> Before: "set up my retro-gaming handhelds" sits as a vague backlog line with no clear definition of done.
+> Before: "set up my home media server" sits as a vague backlog line with no clear definition of done.
 > After: grilled into a real goal, first bucket spec'd (plan + verification lever + checkpoint) with a real deliverable that moves the needle, rest deferred to backlog instead of pretend-finished.
 
 ## Why This Exists
